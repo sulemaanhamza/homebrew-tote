@@ -1,37 +1,39 @@
-# homebrew-stash
+# homebrew-tote
 
-Homebrew tap for [Stash](https://github.com/sulemaanhamza/stash) — a file clipboard for the macOS menu bar.
+Homebrew tap for [Tote](https://github.com/sulemaanhamza/tote) — a file clipboard for the macOS menu bar.
 
 ## Install
 
 ```sh
-brew tap sulemaanhamza/stash
-brew install --cask stash
-xattr -d com.apple.quarantine /Applications/Stash.app
+brew tap sulemaanhamza/tote
+brew install --cask sulemaanhamza/tote/tote
+xattr -d com.apple.quarantine /Applications/Tote.app
 ```
 
-The third line matters. Stash is unsigned (no Apple Developer ID), and Homebrew applies macOS's quarantine attribute by default to cask installs — without removing it, Gatekeeper refuses to launch the app with a "cannot be verified" warning. The `xattr` command strips that attribute. (Homebrew used to support `--no-quarantine` for this; it's been disabled in recent versions.)
+Use the tap-qualified cask name (`sulemaanhamza/tote/tote`) so brew always picks this cask regardless of any future name collisions in the official cask repo.
+
+The third line matters. Tote is unsigned (no Apple Developer ID), and Homebrew applies macOS's quarantine attribute by default to cask installs — without removing it, Gatekeeper refuses to launch the app with a "cannot be verified" warning. The `xattr` command strips that attribute. (Homebrew used to support `--no-quarantine` for this; it's been disabled in recent versions.)
 
 After that, look for the tray icon in your menu bar.
 
 ## Update
 
 ```sh
-brew upgrade --cask stash
+brew upgrade --cask sulemaanhamza/tote/tote
 ```
 
-When a new Stash release is published, this tap is bumped and `brew upgrade` will pick it up.
+When a new Tote release is published, this tap is bumped and `brew upgrade` will pick it up.
 
 ## Uninstall
 
 ```sh
-brew uninstall --cask stash
+brew uninstall --cask sulemaanhamza/tote/tote
 ```
 
-To also remove your saved stash list and preferences:
+To also remove your saved tote list and preferences:
 
 ```sh
-brew uninstall --cask --zap stash
+brew uninstall --cask --zap sulemaanhamza/tote/tote
 ```
 
 ## Why a personal tap?
@@ -40,4 +42,4 @@ The official `homebrew-cask` repo doesn't accept unsigned apps from new submitte
 
 ## License
 
-MIT — see the [main repo](https://github.com/sulemaanhamza/stash/blob/main/LICENSE).
+MIT — see the [main repo](https://github.com/sulemaanhamza/tote/blob/main/LICENSE).
