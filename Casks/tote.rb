@@ -1,6 +1,6 @@
 cask "tote" do
-  version "0.1.5"
-  sha256 "6ba69decc7a7196b726274286bae81975116680dfdbf12ab4dda16913aaa4a68"
+  version "0.1.6"
+  sha256 "152fb2e60ec8a4a45f07aa0a6b3d8387507835d991764285c6407c5e115cf8fa"
 
   url "https://github.com/sulemaanhamza/tote/releases/download/v#{version}/Tote-#{version}.zip"
   name "Tote"
