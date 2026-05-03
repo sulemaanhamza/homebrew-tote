@@ -1,6 +1,6 @@
 cask "stash" do
-  version "0.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  version "0.1.0"
+  sha256 "7e3a6a5e283399d618b9302215bb77ec8449d6fa0408480b211c1c2730b2880d"
 
   url "https://github.com/sulemaanhamza/stash/releases/download/v#{version}/Stash-#{version}.zip"
   name "Stash"
